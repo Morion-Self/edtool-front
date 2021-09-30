@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <ResponsivePopover placement="Right" showHeader="false">
+    <!-- Этот поповер наполняется вручую. Наверное, по хорошему надо сделать чтобы тоже было динамически, но потом -->
+        <List>
+            <StandardListItem
+                title="Настройки"
+                type="Active"
+                icon="sap-icon://account"
+                press="showSettings"/>
+                <StandardListItem title="Помощь" type="Active" icon="sap-icon://question-mark" press="showHelp"/>
+            <StandardListItem title="Выход" type="Active" icon="sap-icon://log" press="logout"/>
+        </List>
+    </ResponsivePopover>
+</core:FragmentDefinition>

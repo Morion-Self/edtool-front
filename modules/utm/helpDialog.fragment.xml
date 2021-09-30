@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:html="http://www.w3.org/1999/xhtml">
+    <Dialog stretch='false' title='Как пользоваться инструментом'>
+        <content>
+            <VBox>
+                <Text text='Вот небольшое двухминунтое видео, где показано, что умеет этот инструмент и как им пользоваться' class='sapUiSmallMarginBottom'/>
+                <html:iframe width="560" height="315" src="https://www.youtube.com/embed/Sej6bL_IXsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen='true'></html:iframe>
+            </VBox>
+        </content>
+        <endButton>
+            <Button press="helpDialogClose" text='OK'/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

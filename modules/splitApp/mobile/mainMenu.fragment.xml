@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Menu title='{i18n>menu}' itemSelected="onNavTo" items="{mainMenu>/}">
+        <items>
+            <MenuItem text="{mainMenu>name}" icon="{mainMenu>icon}"/>
+        </items>
+    </Menu>
+</core:FragmentDefinition>

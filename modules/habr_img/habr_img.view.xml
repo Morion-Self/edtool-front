@@ -1,0 +1,36 @@
+<mvc:View controllerName="eh.modules.habr_img.habr_img"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m">
+    <Page>
+        <customHeader>
+            <Toolbar>
+                <Button icon='sap-icon://menu2' press='showMenuOnPhone' visible="{device>/isPhone}"/>
+                <ToolbarSpacer/>
+                <!-- <SearchField liveChange="onFilterLiveSearch" width="30%" showSearchButton="false"/> -->
+            </Toolbar>
+        </customHeader>
+        <content>
+
+            <l:Splitter>
+                <Page title='1. Текст из редактора Хабра:' >
+                    <TextArea id="inputHabrText" value='https://docs.google.com/document/d/1tlx69HZ0OWE4UM7GUxjzerYZn8bNeKJL2oUjI1QlPZc/edit?usp=sharing' placeholder="Вставьте ссылку на Гугл-документ" width='100%' height='99%'/>
+                </Page>
+                <Page title='2. Список изображений из Habrastorage:' >
+                    <TextArea id="inputHabrastorage" value='https://docs.google.com/document/d/1tlx69HZ0OWE4UM7GUxjzerYZn8bNeKJL2oUjI1QlPZc/edit?usp=sharing' placeholder="Вставьте ссылку на Гугл-документ" width='100%' height='99%'/>
+                </Page>
+            </l:Splitter>
+
+
+
+        </content>
+
+        <footer>
+            <Toolbar>
+            <ToolbarSpacer/>
+            <Button text='Заменить' press='doReplace'/>
+            </Toolbar>
+        </footer>
+
+    </Page>
+</mvc:View>

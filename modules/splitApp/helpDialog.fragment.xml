@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog stretch='false' showHeader='fale'>
+        <content>
+            <HBox>
+                <Text text='По любым вопросам пишите на ' class='sapUiTinyMarginEnd'/>
+                <Link text="t-marat@yandex.ru" target="_blank" href="mailto:t-marat@yandex.ru" />
+            </HBox>
+        </content>
+        <endButton>
+            <Button text='OK' press='closeHelp'/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,24 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:html="http://www.w3.org/1999/xhtml">
+    <Dialog stretch='false' title='Наборы'>
+        <content>
+            <VBox>
+                <Title level='H1' text='Сохранить текущий набор'/>
+                <!-- <Text text='Укажите название набора.'/> -->
+                <!-- <Text text='Если вы укажете название уже существующего набора, он перезапишется.'/> -->
+                <Text text='Если набор с таким названием уже есть, он перезапишется'/>
+                <Input value='{/name}'/>
+                <Button text='Сохранить' icon= 'sap-icon://save' press='saveConfig' type='Accept' width='100%'/>
+
+                <Title level='H1' text='Загрузить / удалить набор' class='sapUiMediumMarginTop'/>
+                <List id="list"  mode="Delete" delete="deleteConfig" items="{sets>/}" class='sapUiSizeCompact' noDataText='Нет сохраненных наборов'>
+                    <StandardListItem title="{sets>}" type='Active' press='loadConfig'/>
+                </List>
+            </VBox>
+        </content>
+        <endButton>
+            <Button text='Закрыть' press='saveDialogClose'/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:html="http://www.w3.org/1999/xhtml">
+    <Dialog stretch='false' title='Ссылки'>
+        <content>
+        <VBox>
+            <Text text='{/result}'/>
+            <FormattedText htmlText="{/html}" class='sapUiSmallMarginTop'/>
+              </VBox>
+        </content>
+        <endButton>
+            <Button text='Закрыть' press='resultDialogClose'/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

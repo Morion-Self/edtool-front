@@ -1,0 +1,12 @@
+# backend
+backend/
+
+# htaccess
+.htaccess
+
+# analytics
+_googleAnalytics.php
+_yandexMetrika.php
+
+# sdk for local dev
+openui5/

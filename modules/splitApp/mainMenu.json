@@ -1,0 +1,32 @@
+[
+    {
+        "key": "gdoc_extract_img",
+        "name": "Извлечь изображения из Гугл-дока",
+        "icon": "sap-icon://background",
+        "type": "top"
+    },
+    {
+        "key": "utm",
+        "name": "Разметить и сократить ссылку",
+        "icon": "sap-icon://target-group",
+        "type": "top"
+    },
+    {
+        "key": "settings",
+        "name": "Настройки",
+        "icon": "sap-icon://action-settings",
+        "type": "bottom"
+    },
+    {
+        "key": "help",
+        "name": "Помощь",
+        "icon": "sap-icon://question-mark",
+        "type": "bottom"
+    },
+    {
+        "key": "logout",
+        "name": "Выход",
+        "icon": "sap-icon://log",
+        "type": "bottom"
+    }
+]
