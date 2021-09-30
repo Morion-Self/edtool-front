@@ -1,0 +1,35 @@
+{
+    "sap.ui5": {
+        "rootView": {
+            "id": "app",
+            "viewName": "recovery.app",
+            "type": "XML"
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "transition": "show"
+            },
+            "routes": [{
+                "pattern": [
+                    "",
+                    "email"
+                ],
+                "name": "email",
+                "target": "index"
+            }, {
+                "pattern": "password/{token}",
+                "name": "password",
+                "target": "index"
+            }],
+            "targets": {
+                "index": {
+                    "viewName": "recovery.app"
+                }
+            }
+        }
+    }
+}

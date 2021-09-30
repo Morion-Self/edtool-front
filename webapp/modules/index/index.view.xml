@@ -1,0 +1,64 @@
+<mvc:View controllerName="eh.modules.index.index"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page>
+        <customHeader>
+            <Toolbar>
+                <Image src="./img/logo64.png" width='32px' class='sapUiSmallMarginBegin'/>
+                <Label level='H1' text='edTool.ru'/>
+                <ToolbarSpacer/>
+                <Button text="Вход / Регистрация" icon="sap-icon://log" type="Accept" press="showLoginDialog"/>
+            </Toolbar>
+        </customHeader>
+        <content>
+
+            <VBox class='edLandingVBox'>
+
+                <html:h1 class='edLandingH1 sapUiLargeMarginTop'>edTool.ru</html:h1>
+                <html:div style='text-align: center'>Инструменты для редакторов, авторов, и всех, кто работает с контентом</html:div>
+                <Text text='Сервис избавляет от рутины при работе с контентом. Будет полезен редакторам, авторам, копирайтерам, smm- и контент-менеджерам.' class='edLandingText sapUiLargeMarginTop'/>
+                <Text text='Сейчас сервис может сделать для вас две вещи:' class='edLandingText sapUiSmallMarginTop'/>
+
+                <!-- ========================================================================= -->
+
+                <html:h2 class='edLandingH2 sapUiLargeMarginTop'>Скачать изображения из Гугл-дока</html:h2>
+                <Text text='Извлекает все изображения и нумерует их в порядке расположения в документе.' class='edLandingText sapUiSmallMarginTop'/>
+                <FormattedText htmlText="{/HTML1}" class='edLandingText sapUiSmallMarginTop'/>
+                <Image src="./img/gdoc_extract_image_schema.png" class='sapUiMediumMarginTop'/>
+                <Link text='Небольшое видео с демонстрацией' href="https://www.youtube.com/embed/WSbCZEg6CLk" target='_blank' class='edLandingText sapUiSmallMarginTop'/>
+
+                <!-- ========================================================================= -->
+
+                <html:h2 class='edLandingH2 sapUiLargeMarginTop'>Разметить и сократить ссылки</html:h2>
+                <Text text='Размечает ссылки UTM-метками и сокращает их. Позволяет создавать шаблоны и быстро подготавливать ссылки к публикации.' class='edLandingText sapUiSmallMarginTop'/>
+                <Text text='Пригодится тем, кто ведет соцсети или запускает рекламные кампании. Особенно полезно, если вы ведете несколько проектов и на каждом из них свои правила разметки.' class='edLandingText sapUiSmallMarginTop'/>
+
+                <Text text='Вот небольшое видео с демонстрацией:' class='edLandingText sapUiMediumMarginTop sapUiSmallMarginBottom'/>
+
+                <html:div class='edLandingEmbed-container sapUiLargeMarginBottom'>
+                    <html:iframe src='https://www.youtube.com/embed/Sej6bL_IXsE' frameborder='0' allowfullscreen='true'></html:iframe>
+                </html:div>
+
+                <html:h2 class='edLandingH2 sapUiLargeMarginTop'>... и другие полезные вещи в будущем</html:h2>
+                <Text text='Пока это все. Но постепенно я буду добавлять что-то новое. Если у вас появится идея — пишите, может быть сможем ее реализовать.' class='edLandingText sapUiSmallMarginTop'/>
+
+                <!-- ========================================================================= -->
+
+                <html:h2 class='edLandingH2 sapUiLargeMarginTop'>Сколько это стоит?</html:h2>
+                <Text text='Первые две недели бесплатно, потом 500 рублей в год.' class='edLandingText sapUiSmallMarginTop'/>
+
+                <!-- ========================================================================= -->
+
+                <html:div style='text-align: center; margin-top: 100px; margin-bottom: 15px;'>
+                    <html:a href='https://marat-talipov.ru' target="_blank">Марат Талипов</html:a>
+                </html:div>
+            </VBox>
+
+        </content>
+
+    </Page>
+</mvc:View>

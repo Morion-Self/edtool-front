@@ -1,0 +1,40 @@
+<mvc:View xmlns="sap.m" controllerName="eh.modules.settings.settings"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout">
+
+    <Page showHeader='{device>/isPhone}'>
+        <customHeader>
+            <Toolbar>
+                <Button icon='sap-icon://menu2' press='showMenuOnPhone' visible="{device>/isPhone}"/>
+                <ToolbarSpacer/>
+            </Toolbar>
+        </customHeader>
+        <content>
+            <IconTabBar id='iconTabBar' upperCase='true' expandable='false'>
+                <items>
+                    <IconTabFilter key="tabUser" text="Пользователь">
+                        <VBox id='vboxEmail'>
+                            <Label text="{user>/userInfo/email}"/>
+                        </VBox>
+                        <Panel headerText="Пароль" expandable="false" expanded="true" backgroundDesign="Transparent">
+                            <FlexBox alignItems="Center" justifyContent="Center">
+                                <VBox>
+                                    <Input id="inputOldPassword" placeholder="Старый пароль" type="Password" submit='onChangePasswordPress' width="300px"/>
+                                    <Input id="inputNewPassword" placeholder="Новый пароль" type="Password" submit='onChangePasswordPress' width="300px"/>
+                                    <Button text="Сменить" press="onChangePasswordPress" width="300px"/>
+                                </VBox>
+                            </FlexBox>
+                        </Panel>
+                    </IconTabFilter>
+                    <IconTabFilter key="tabPay" text="Оплата">
+                        <VBox>
+                            <Text text='Подписка действует до: {user>/premiumUntilFormatted}' visible='{user>/isPremium}'/>
+                            <Text text='Продлить подписку можно будет за 2 недели до ее окончания' visible='{= !${user>/canPay} }' class='sapUiTinyMarginTop'/>
+                            <Button id='buttonPay' text='Продлить подписку на 1 год за 500 рублей' press='pay' class='sapUiTinyMarginTop' visible='{user>/canPay}'/>
+                        </VBox>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+        </content>
+    </Page>
+</mvc:View>

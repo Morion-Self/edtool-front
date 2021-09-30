@@ -1,0 +1,27 @@
+<mvc:View xmlns="sap.m" controllerName="eh.modules.splitApp.splitApp"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:tnt="sap.tnt" displayBlock="true">
+
+    <!-- displayBlock="true" (который выше) спасает от двойного скролла. ХЗ что он делает, но он крут. -->
+
+    <SplitApp id="splitApp" mode="ShowHideMode">
+        <masterPages>
+            <Page id="master" showHeader="false">
+                <subHeader>
+                    <Toolbar>
+                        <Image src="./img/logo64.png" width='32px'/>
+                        <ToolbarSpacer/>
+                        <Title text="edTool"/>
+                        <ToolbarSpacer/>
+                        <Button id="buttonSettings" icon="sap-icon://action-settings" tooltip="Настройки" press="onSettingsButtonPress"/>
+                    </Toolbar>
+                </subHeader>
+
+                <tnt:NavigationList id="listMainMenu" itemSelect="onNavTo" items="{mainMenu>/}">
+                    <tnt:NavigationListItem text='{mainMenu>name}' icon='{mainMenu>icon}'/>
+                </tnt:NavigationList>
+            </Page>
+        </masterPages>
+    </SplitApp>
+</mvc:View>

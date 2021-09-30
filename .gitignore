@@ -10,3 +10,11 @@ _yandexMetrika.php
 
 # sdk for local dev
 openui5/
+
+# node_modules
+node_modules/
+
+ui/
+ui_new/
+
+package-lock.json

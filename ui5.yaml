@@ -1,0 +1,11 @@
+specVersion: '2.6'
+metadata:
+  name: edtool-front
+type: application
+framework:
+  name: OpenUI5
+  version: "1.96.2"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: themelib_sap_fiori_3

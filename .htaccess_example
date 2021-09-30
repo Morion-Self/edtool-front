@@ -1,0 +1,23 @@
+# Редирект корневой страницы в папку ui
+# На локальной разработке нужно заменить на webapp
+Redirect /index.html /ui/
+
+# rewrite кешированных файлов приложения
+# То есть отлавилвает запросы вида ui/~1636096207868~/ и менет их на ui/
+# P.S. Папку ui_new я использую на продакшене перед апдейтом для теста
+RewriteEngine On
+RewriteRule ui/~[0-9]{13}~/(.*) /ui/$1
+RewriteRule ui_new/~[0-9]{13}~/(.*) /ui_new/$1
+
+# запрещаем кэшировать файл, в котором хранятся временные метки
+<Files sap-ui-cachebuster-info.json>
+FileETag None
+Header unset ETag
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "Fri, 01 Jan 2021 05:00:00 GMT"
+</Files>
+
+# Включить при локальной разработке. 
+# Чтобы кэш держался 1 день
+#Header set Cache-Control "max-age=86400"

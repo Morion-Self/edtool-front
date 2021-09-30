@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "@ui5/cli": "^2.14.0"
+  },
+  "name": "edtool-front",
+  "version": "1.0.0",
+  "main": "Component.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "ui5 build --dest ui --clean-dest --include-task=generateCachebusterInfo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edtoolru/edtool-front.git"
+  },
+  "keywords": [],
+  "author": "https://marat-talipov.ru",
+  "bugs": {
+    "url": "https://github.com/edtoolru/edtool-front/issues"
+  },
+  "homepage": "https://github.com/edtoolru/edtool-front#readme",
+  "description": ""
+}

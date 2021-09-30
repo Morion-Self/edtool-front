@@ -1,0 +1,27 @@
+<mvc:View controllerName="eh.modules.gdoc_extract_img.gdoc_extract_img"
+    xmlns="sap.m"
+    xmlns:core='sap.ui.core'
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page>
+        <customHeader>
+            <Toolbar>
+                <Button icon='sap-icon://menu2' press='showMenuOnPhone' visible="{device>/isPhone}"/>
+                <ToolbarSpacer/>
+                <Title text="Извлечь изображения из Гугл-дока" />
+                <ToolbarSpacer/>
+                <Button icon='sap-icon://question-mark' tooltip='Помощь' press='helpDialogShow'/>
+            </Toolbar>
+        </customHeader>
+        <content>
+            <FlexBox alignItems="Center" justifyContent="Center" class='sapUiLargeMarginTop' >
+                <VBox>
+                    <TextArea id="inputGDocUrl" placeholder="Вставьте ссылку на Гугл-документ (он должен быть открыт на чтение по ссылке)" width='600px' rows='3' />
+                    <Button text="Извлечь" width='600px' press="pressGDocExtract" type='Accept' tooltip="Извлечь изображения из Гугл-документа" enabled='{user>/isPremium}' />
+                    <Link text='У вас закончилась подписка, нужно оплатить' href="./#/settings/pay" class='ehColorRed sapUiSmallMarginTop' visible='{= !${user>/isPremium} }'/>
+                </VBox>
+            </FlexBox>
+        </content>
+    </Page>
+
+
+</mvc:View>

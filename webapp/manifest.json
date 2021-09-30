@@ -1,0 +1,63 @@
+{
+    "_version": "0.5.1",
+    "sap.ui5": {
+        "rootView": {
+            "id": "splitAppView",
+            "viewName": "eh.modules.splitApp.splitApp",
+            "type": "XML"
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "controlId": "splitApp",
+                "controlAggregation": "detailPages",
+                "transition": "show"
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "init",
+                    "target": "gdoc_extract_img"
+                },
+                {
+                    "pattern": "gdoc_extract_img",
+                    "name": "gdoc_extract_img",
+                    "target": "gdoc_extract_img"
+                },
+                {
+                    "pattern": "habr_img",
+                    "name": "habr_img",
+                    "target": "habr_img"
+                },
+                {
+                    "pattern": "utm",
+                    "name": "utm",
+                    "target": "utm"
+                },
+                {
+                    "pattern": "settings/:type:",
+                    "name": "settings",
+                    "target": "settings"
+                }
+            ],
+            "targets": {
+                "gdoc_extract_img": {
+                    "viewName": "eh.modules.gdoc_extract_img.gdoc_extract_img"
+                },
+                "habr_img": {
+                    "viewName": "eh.modules.habr_img.habr_img"
+                },
+                "utm": {
+                    "viewName": "eh.modules.utm.utm"
+                },
+                "settings": {
+                    "viewName": "eh.modules.settings.settings"
+                }
+            }
+        }
+    },
+    "sap.app" : {
+        "id": "edtool-front"
+    }
+}

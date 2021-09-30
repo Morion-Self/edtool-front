@@ -1,0 +1,23 @@
+<mvc:View xmlns="sap.m" controllerName="recovery.app"
+    xmlns:mvc="sap.ui.core.mvc">
+    <App id="app" busyIndicatorDelay='1'>
+        <Page id='pageEmail' showNavButton='true' navButtonPress='gotoRoot' navButtonTooltip='На основной сайт'>
+            <FlexBox alignItems="Center" justifyContent="Center">
+                <VBox width='30%'>
+                    <Label text='Укажите E-mail' class='sapUiLargeMarginTop' labelFor='email'/>
+                    <Input id='email' value='{/email}' type='Email' enabled='{= ${/login}.length === 0 }' valueLiveUpdate='true' submit='reset'/>
+                    <Button type='Accept' text='Сбросить пароль' class='sapUiMediumMarginTop' width='100%' press='reset' enabled='{= ${/login}.length > 0 || ${/email}.length > 0 }'/>
+                </VBox>
+            </FlexBox>
+        </Page>
+        <Page id='pagePassword' showNavButton='true' navButtonPress='gotoRoot' navButtonTooltip='На основной сайт'>
+            <FlexBox alignItems="Center" justifyContent="Center">
+                <VBox width='30%'>
+                    <Label text='Введите новый пароль' class='sapUiLargeMarginTop' labelFor='password'/>
+                    <Input id='password' value='{/password}' type='Password' submit='set'/>
+                    <Button type='Accept' text='Сохранить' class='sapUiMediumMarginTop' width='100%' press='set'/>
+                </VBox>
+            </FlexBox>
+        </Page>
+    </App>
+</mvc:View>
