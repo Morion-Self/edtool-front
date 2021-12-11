@@ -20,7 +20,7 @@
                 <Text text='Ссылка:'/>
                 <Input id="inputUrl" placeholder="Вставьте ссылку, которую нужно разметить и сократить" width='800px' type='Url' liveChange='onUrlChange' valueStateText='Неправильный URL'/>
                 <ToolbarSpacer/>
-                <Button icon='sap-icon://duplicate' text='Наборы' press='showSaveDialog' enabled='{user>/isPremium}'/>
+                <Button icon='sap-icon://duplicate' text='Наборы' press='showSaveDialog'/>
             </Toolbar>
         </subHeader>
         <content>
@@ -36,12 +36,12 @@
                             <f:toolbar>
                                 <Toolbar>
                                     <Title text="Разметка #{number}"/>
-                                    <Button icon='sap-icon://decline' press='deleteBlock' tooltip='Удалить разметку' type='Transparent' enabled='{user>/isPremium}'/>
+                                    <Button icon='sap-icon://decline' press='deleteBlock' tooltip='Удалить разметку' type='Transparent'/>
                                 </Toolbar>
                             </f:toolbar>
                             <f:formElements>
                                 <f:FormElement label='Разметить'>
-                                    <CheckBox selected="{isUtmEnabled}" tooltip='Нужно ли размечать ссылку UTM-метками' enabled='{user>/isPremium}'/>
+                                    <CheckBox selected="{isUtmEnabled}" tooltip='Нужно ли размечать ссылку UTM-метками'/>
                                 </f:FormElement>
                                 <f:FormElement label="utm_source" visible="{isUtmEnabled}">
                                     <Input placeholder='vk, facebook, google, yandex' value='{utm_source}'/>
@@ -67,17 +67,14 @@
                         </f:FormContainer>
                     </f:formContainers>
                 </f:Form>
-                <Button icon='sap-icon://add' tooltip='Добавить разметку' press='addBlock' class='sapUiSmallMarginBegin' enabled='{user>/isPremium}'/>
-
-                <Link text='У вас закончилась подписка, нужно оплатить' href="./#/settings/pay" class='ehColorRed sapUiSmallMarginTop sapUiSmallMarginBegin' visible='{= !${user>/isPremium} }'/>
-
+                <Button icon='sap-icon://add' tooltip='Добавить разметку' press='addBlock' class='sapUiSmallMarginBegin'/>
             </VBox>
 
         </content>
         <footer>
             <Toolbar>
                 <ToolbarSpacer/>
-                <Button text="Разметить и сократить" press="pressDo" type='Accept' tooltip="Разметить и сократить" enabled='{user>/isPremium}'/>
+                <Button text="Разметить и сократить" press="pressDo" type='Accept' tooltip="Разметить и сократить"/>
                 <ToolbarSpacer/>
             </Toolbar>
         </footer>

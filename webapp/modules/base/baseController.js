@@ -28,17 +28,5 @@ sap.ui.define([
         busyIndicatorHide: function () {
             BusyIndicator.hide();
         },
-
-        showNeedPay: function () {
-            MessageBox.error("У вас закончилась подписка, нужно оплатить", {
-                title: '',
-                actions: [MessageBox.Action.OK],
-                onClose: function () {
-                    base.getRouter().navTo('settings', {
-                        type: 'pay'
-                    });
-                }
-            });
-        }
     });
 });

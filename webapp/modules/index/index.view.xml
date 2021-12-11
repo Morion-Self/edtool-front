@@ -49,7 +49,7 @@
                 <!-- ========================================================================= -->
 
                 <html:h2 class='edLandingH2 sapUiLargeMarginTop'>Сколько это стоит?</html:h2>
-                <Text text='Первые две недели бесплатно, потом 500 рублей в год.' class='edLandingText sapUiSmallMarginTop'/>
+                <Text text='Бесплатно' class='edLandingText sapUiSmallMarginTop'/>
 
                 <!-- ========================================================================= -->
 

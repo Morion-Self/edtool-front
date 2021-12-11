@@ -182,9 +182,6 @@ sap.ui.define([
                     case 401:
                         window.location.reload();
                         break;
-                    case 402:
-                        that.showNeedPay();
-                        break;
                     default:
                         MessageToast.show('Непредвиденная ошибка.\nПопробуйте еще раз');
                 }

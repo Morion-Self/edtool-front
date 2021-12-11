@@ -51,9 +51,6 @@ sap.ui.define([
                     case 401:
                         window.location.reload();
                         break;
-                    case 402:
-                        that.showNeedPay();
-                        break;
                     case 404:
                         MessageToast.show('Гугл-док не найден.\nВы точно ввели правильную ссылку?');
                         break;

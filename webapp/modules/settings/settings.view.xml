@@ -26,13 +26,6 @@
                             </FlexBox>
                         </Panel>
                     </IconTabFilter>
-                    <IconTabFilter key="tabPay" text="Оплата">
-                        <VBox>
-                            <Text text='Подписка действует до: {user>/premiumUntilFormatted}' visible='{user>/isPremium}'/>
-                            <Text text='Продлить подписку можно будет за 2 недели до ее окончания' visible='{= !${user>/canPay} }' class='sapUiTinyMarginTop'/>
-                            <Button id='buttonPay' text='Продлить подписку на 1 год за 500 рублей' press='pay' class='sapUiTinyMarginTop' visible='{user>/canPay}'/>
-                        </VBox>
-                    </IconTabFilter>
                 </items>
             </IconTabBar>
         </content>

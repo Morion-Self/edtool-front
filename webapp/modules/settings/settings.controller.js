@@ -23,9 +23,6 @@ sap.ui.define([
 
         _onObjectMatched: function (oEvent) {
             let selectedTab = 'tabUser';
-            if (oEvent.getParameter("arguments").type === 'pay') {
-                selectedTab = 'tabPay';
-            }
             this.byId('iconTabBar').setSelectedKey(selectedTab);
         },
 
@@ -66,29 +63,5 @@ sap.ui.define([
             oEvent.getSource().setValueState();
         },
 
-        pay: function () {
-            this.busyIndicatorShow();
-            $.post({
-                url: window.location.origin + '/backend/services/pay.php',
-                data: {
-                    GENERATE_LINK_FOR_PAY: 1
-                }
-            }).done(function (lnk) {
-                if (lib.isValidUrl(lnk)) {
-                    sap.m.URLHelper.redirect(lnk, false);
-                } else {
-                    _showError('Непредвиденная ошибка.\nПопробуйте позже');
-                }
-            }).fail(function (answer) {
-                if (answer.status === 401) {
-                    window.location.reload();
-                } else {
-                    _showError('Непредвиденная ошибка.\nПопробуйте позже');
-                }
-            }).always(function () {
-                this.busyIndicatorHide();
-            }.bind(this));
-
-        }
     });
 });
